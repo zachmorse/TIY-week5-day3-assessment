@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/", express.static("./public"));
 
 var todos = [];
-
+var itemID = 0;
 app.get("/", function(req, res) {
   res.render("index", { todos: todos });
 });
